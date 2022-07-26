@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+div{
+    font-family: 'Poppins', sans-serif;
+}
+
+.Wrapper{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:  100vh;
+    width:  80%;
+
+
+}
+.MainWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.fullname{
+    margin-top: 0px!important;
+}
+.AuthWrapper{
+    border : 2px solid rgb(26, 59, 88 , 0.24);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 65px;
+  
+    
+   
+}
+.SelectionWrapper div{
+    color: "#1A3B58";
+}
+.InputWrapper input{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    width:   250px;
+
+}
+.InputWrapper{
+    border:  1px solid #CBDBEA;
+    margin-top:  25px;
+    margin-bottom: 20px;
+    display:  flex;
+    flex-direction: row;
+    font-size: 14px ;
+    padding-top:  10px;
+    padding-bottom:  10px;
+
+    padding-left:  19px;
+    padding-right:  19px;
+    border-radius: 8px ;
+   
+}
+.SubmitButton{
+
+    background: #329C89;
+    font-weight: 700;
+    color: white;
+    margin-top:  25px;
+    margin-bottom:  39px;
+    cursor: pointer;
+    text-align: center;
+    padding-top:10px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-radius:  8px;
+    
+}
+.SvgWrapper img{
+    width: 100%;
+}
+.UnderLine{
+    border-bottom: 1px solid #CBDBEA;
+    width: 100%;
+    margin: 10px 0;
+}
+.SelectionWrapper{
+    display:  flex;
+    flex-direction: row;
+    font-weight: 400;
+
+    width: 100%;
+    justify-content: left;
+}
+.SelectionWrapper div{
+    margin-right: 23px;
+    font-size: 26px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.SecondHalf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+.Selected::after{
+    content: "";
+    margin-left: 2px;
+    display: block;
+    border-radius: 8px;
+    height: 4px;
+    background: #1A3B58;
+    transition: width 0.7s;
+    width: 0px;
+    margin-top: 6px;
+    animation: line 0.3s forwards ;
+}
+/* animations */
+@keyframes line{
+    100%{
+        width:25px;
+    }
+}
+.RememberMe{
+    font-size: 10px;
+    color: rgb(26, 59, 88, 0.64);
+}
+.InstructionWrapper{
+    display: flex;
+    flex-direction: column;
+}
+.RememberMeCheckBox{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: 0px ;
+}
+.Selected{
+    font-weight: 500;
+}
+/* .Email:invalid{
+    border: 1px solid red;
+}
+.Password:invalid{
+    border: 1px solid red;
+}
+.Password:valid{
+    border: 1px solid green;
+}
+.Email:valid{
+    border: 1px solid green;
+} */
