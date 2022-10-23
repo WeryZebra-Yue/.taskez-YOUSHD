@@ -59,17 +59,13 @@ function Popup({ openModal, close }) {
     e.preventDefault();
     setSubmit(true);
     // change file to bs64
-    console.log(e);
     const file = pictureUrl;
 
     const storage = getStorage(app);
     const profileRef = ref(storage, `profile/${User.uid}.jpg`);
     uploadBytes(profileRef, file).then((snap) => {
-      console.log(snap);
       getDownloadURL(profileRef).then((url) => {
-        console.log(url);
         const id = auth.currentUser.uid;
-        console.log(id);
         updateProfile(auth.currentUser, {
           photoURL: url,
         });
