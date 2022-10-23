@@ -144,20 +144,6 @@ function Projects() {
         console.log(err);
       });
   };
-  const [taskStatus, setTaskStatus] = React.useState({
-    toDo: {
-      name: "To do",
-      items: [],
-    },
-    inProgress: {
-      name: "In Progress",
-      items: [],
-    },
-    completed: {
-      name: "Completed",
-      items: [],
-    },
-  });
   const onDragEnd = (result, columns, setColumns) => {
     if (!result.destination) return;
     const { source, destination } = result;
@@ -224,7 +210,7 @@ function Projects() {
       .catch((err) => {
         console.log(err);
       });
-  }, [taskStatus]);
+  }, []);
   const [columns, setColumns] = useState({
     toDo: {
       name: "To do",
@@ -342,8 +328,6 @@ function Projects() {
               className="MainColumnWrapper"
               style={{
                 display: "flex",
-                // justifyContent: "center",
-                // height: "100%",
               }}
             >
               <DragDropContext
@@ -351,15 +335,7 @@ function Projects() {
               >
                 {Object.entries(columns).map(([columnId, column], index) => {
                   return (
-                    <div
-                      className="ColumnWrapper"
-                      // style={{
-                      //   display: "flex",
-                      //   flexDirection: "column",
-                      //   alignItems: "center",
-                      // }}
-                      key={columnId}
-                    >
+                    <div className="ColumnWrapper" key={columnId}>
                       <div className="ColumnTitle">
                         <div>{column.name}</div>
                         <div className="Count">{column.items.length}</div>
@@ -386,12 +362,7 @@ function Projects() {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                                 style={{
-                                  // background: snapshot.isDraggingOver
-                                  //   ? "lightblue"
-                                  //   : "lightgrey",
-
                                   padding: 4,
-
                                   minHeight: 500,
                                 }}
                               >
@@ -402,25 +373,17 @@ function Projects() {
                                     <div
                                       style={{
                                         padding: 16,
-                                        // margin: "0 0 8px 0",
                                         minHeight: "50px",
-
                                         backgroundColor: "#ffff",
                                         borderRadius: "7px",
-
                                         marginBottom: "25px",
-
                                         transform: snapshot.isDragging
                                           ? "rotate(-12deg)"
                                           : "rotate(0deg)",
                                         transition: "all 0.3s",
                                       }}
                                     >
-                                      <form
-                                        onSubmit={AddNewTask}
-                                        id={index}
-                                        // className={index}
-                                      >
+                                      <form onSubmit={AddNewTask} id={index}>
                                         <div
                                           style={{
                                             color: "black",
@@ -472,7 +435,6 @@ function Projects() {
                                               height: "46px",
                                               fontSize: "12px",
                                               fontWeight: 400,
-                                              // color: "#A4ABB3",
                                             }}
                                           />
                                         </div>
@@ -545,12 +507,9 @@ function Projects() {
                                             <div
                                               style={{
                                                 padding: 16,
-                                                // margin: "0 0 8px 0",
                                                 minHeight: "50px",
-
                                                 backgroundColor: "#ffff",
                                                 borderRadius: "7px",
-
                                                 transform: snapshot.isDragging
                                                   ? "rotate(-6deg)"
                                                   : "rotate(0deg)",
