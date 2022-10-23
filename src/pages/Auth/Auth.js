@@ -135,7 +135,6 @@ function Auth() {
             </div>
           </div>
           <div className="SecondHalf">
-            <div className="UnderLine"></div>
             <div className="AuthContainer">
               {signin ? (
                 <form
