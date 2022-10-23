@@ -143,7 +143,6 @@ function Projects() {
       .catch((err) => {
         console.log(err);
       });
-
   };
   const [taskStatus, setTaskStatus] = React.useState({
     toDo: {
