@@ -100,7 +100,7 @@ function Projects() {
       // User is logged in
       navigate("/projects");
       setUser(Auth.currentUser);
-      document.getElementById("loader").remove();
+      document.getElementById("loader")?.remove();
     } else {
       // User is not logged in
       navigate("/auth");
