@@ -14,7 +14,6 @@ import { app } from "../../auth/firebase-credential.js";
 // Assets
 import SvgLayer from "../../assets/svg/layer.svg";
 import errorSvg from "../../assets/svg/error.svg";
-// import EyeSvg from "../../assets/svg/eye.svg";
 // CSS Imports
 import "./Auth.css";
 import { LogIn, SignIn } from "../../auth/auth.js";
@@ -39,11 +38,9 @@ function Auth() {
   // Sign in with email and password
   const LogIn = (email, password) => {
     const auth = getAuth(app);
-    console.log(email, password);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
         navigate("/projects");
         return [true, user];
       })
@@ -62,7 +59,6 @@ function Auth() {
           setLoginErrorMessage("Invalid email!");
         }
 
-        // ..
         console.log(errorMessage, errorCode);
         return [false, errorMessage];
       });
@@ -70,7 +66,6 @@ function Auth() {
   const SignIn = (name, email, password) => {
     const database = getDatabase();
     const auth = getAuth();
-    console.log(name, email, password);
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -95,7 +90,6 @@ function Auth() {
           setSigninErrorMessage("Weak password!");
         }
         console.log(errorMessage, errorCode);
-        // ..
       });
   };
 

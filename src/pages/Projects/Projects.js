@@ -96,7 +96,6 @@ function Projects() {
   const Auth = getAuth();
   const [OpenModal, setOpenModal] = useState(false);
   useEffect(() => {
-    console.log("useEffect", Auth.currentUser);
     if (Auth.currentUser != null) {
       // User is logged in
       navigate("/projects");
@@ -145,7 +144,6 @@ function Projects() {
         console.log(err);
       });
 
-    console.log("Columns", columns);
   };
   const [taskStatus, setTaskStatus] = React.useState({
     toDo: {
@@ -203,7 +201,6 @@ function Projects() {
 
     get(ref(db, "columns"))
       .then((snapshot) => {
-        // console.log("Columns", snapshot.val());
         let column = {
           toDo: {
             name: "To do",
@@ -247,7 +244,6 @@ function Projects() {
   useEffect(() => {
     const db = getDatabase();
 
-    console.log("useEffect", columns);
     const TempColumn = {
       toDo: {
         name: "To do",
@@ -264,7 +260,6 @@ function Projects() {
     };
 
     if (!object_equals(columns, TempColumn)) {
-      console.log(columns, TempColumn);
       set(ref(db, "columns"), columns)
         .then(() => {
           console.log("Columns saved");
