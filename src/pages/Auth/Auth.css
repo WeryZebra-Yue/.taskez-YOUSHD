@@ -22,10 +22,10 @@ div {
 }
 .AuthWrapper {
   border: 2px solid rgb(26, 59, 88, 0.24);
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
   border-radius: 65px;
 }
 .SelectionWrapper div {
@@ -68,11 +68,7 @@ div {
 .SvgWrapper img {
   width: 100%;
 }
-.UnderLine {
-  border-bottom: 1px solid #cbdbea;
-  width: 100%;
-  margin: 10px 0;
-}
+
 .SelectionWrapper {
   display: flex;
   flex-direction: row;
@@ -92,8 +88,6 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 .Selected::after {
   content: "";
@@ -114,7 +108,7 @@ div {
   }
 }
 .RememberMe {
-  font-size: 10px;
+  font-size: 14px;
   color: rgb(26, 59, 88, 0.64);
 }
 .InstructionWrapper {
@@ -126,6 +120,7 @@ div {
   align-items: center;
   outline: none;
   border: 0px;
+  font-size: 1.5rem;
 }
 .Selected {
   font-weight: 500;
