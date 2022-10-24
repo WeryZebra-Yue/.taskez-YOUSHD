@@ -7,10 +7,15 @@ div {
 .Wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   width: 80%;
+  gap: 8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
 }
 .MainWrapper {
   display: flex;
@@ -22,11 +27,11 @@ div {
 }
 .AuthWrapper {
   border: 2px solid rgb(26, 59, 88, 0.24);
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-left: 40px;
   padding-right: 40px;
-  border-radius: 65px;
+  border-radius: 25px;
 }
 .SelectionWrapper div {
   color: "#1A3B58";
@@ -125,15 +130,3 @@ div {
 .Selected {
   font-weight: 500;
 }
-/* .Email:invalid{
-    border: 1px solid red;
-}
-.Password:invalid{
-    border: 1px solid red;
-}
-.Password:valid{
-    border: 1px solid green;
-}
-.Email:valid{
-    border: 1px solid green;
-} */
