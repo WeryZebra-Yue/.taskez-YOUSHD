@@ -2,3 +2,168 @@
 div {
   font-family: "Poppins", sans-serif;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  z-index: -100;
+  
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.caption{
+  padding: 10px;
+
+}
+.header{
+  position: fixed;
+  top: 0; 
+  padding: 5px;
+  width: 100%;
+  z-index: 100;
+  background-color: wheat;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid rgb(109, 36, 36,0.7);
+  box-shadow: rgb(109, 36, 36,0.1) 0 4px 12px;
+
+
+}
+.inputoutput:hover{
+  border: 3px solid rgb(165, 42, 42,0.5);  
+  transition: all 0.5s ease;
+  transform: scale(1.02);
+  
+  box-shadow: rgb(165, 42, 42) 0 1px 3px 0;
+  
+}
+.inputoutput{
+  
+  display: flex;
+  transition: all 0.5s ease;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid rgb(165, 42, 42,0.15);  
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 45%!important;
+  max-width: 80%;
+}
+@media screen and (max-width: 600px) {
+  .inputoutput{
+    /* min-width: 100%!important; */
+    max-width: 90%;
+  }
+  .button{
+    width: 70%!important;
+  }
+}
+  
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.image{
+
+  max-height: 900px;
+  height: auto;
+  width: auto;
+  max-width: 80%!important;
+  margin: 20px;
+
+
+}
+.button {
+
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgb(165, 42, 42,0.50);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: brown;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 10px;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+.canva{
+  
+  max-height: 900px;
+  height: auto;
+  width: auto;
+  max-width: 80%!important;
+  margin: 20px;
+
+}
+.button:hover,
+.button:focus {
+  border: 1px solid rgb(165, 42, 42,0.15);
+
+  box-shadow: rgb(165, 42, 42,0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: brown;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: white;
+  transform: translateY(0);
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
