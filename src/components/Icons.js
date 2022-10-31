@@ -25,9 +25,6 @@ function Icons({ name, icon }) {
           justifyContent: "space-between",
           marginTop: "40px",
           fontWeight: name == "Projects" ? "500" : "400",
-
-          // justifyContent: "center",
-          // alignItems: "center",
         }}
       >
         <div
