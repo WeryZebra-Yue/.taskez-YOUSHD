@@ -1,7 +1,7 @@
 import React from "react";
-
 import Modal from "react-modal";
 import crossSvg from "../assets/svg/Cross.svg";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -21,12 +21,7 @@ function Popup({ openModal, close }) {
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(true);
 
-  //   function openModal() {
-  //     setIsOpen(true);
-  //   }
-
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
     subtitle.style.color = "#f00";
   }
 
@@ -51,7 +46,6 @@ function Popup({ openModal, close }) {
           style={{
             display: "flex",
             flexDirection: "row",
-            // width: "100%",
             justifyContent: "space-between",
             padding: "25px",
           }}
