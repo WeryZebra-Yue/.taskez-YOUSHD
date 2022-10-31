@@ -1,12 +1,5 @@
 import { getAuth, updateProfile } from "firebase/auth";
-// import {} from "firebase/database";
-import {
-  getStorage,
-  uploadString,
-  ref,
-  uploadBytes,
-  getDownloadURL,
-} from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import React, { useEffect } from "react";
 import Modal from "react-modal";
 import crossSvg from "../assets/svg/Cross.svg";
