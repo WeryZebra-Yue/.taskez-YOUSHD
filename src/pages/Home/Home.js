@@ -7,7 +7,6 @@ function Home() {
   const navigate = useNavigate();
   useEffect(() => {
     // check if user is logged in
-
     onAuthStateChanged(auth, (user) => {
       if (user) {
         navigate("/projects");
@@ -18,7 +17,14 @@ function Home() {
       }
     });
   });
-  return <div></div>;
+
+  return (
+    <div>
+      <header>
+        <h1>Homepage</h1>
+      </header>
+    </div>
+  );
 }
 
 export default Home;
